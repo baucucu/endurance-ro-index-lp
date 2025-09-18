@@ -31,12 +31,6 @@ const AMBASSADORS = [
         instagramUrl: "https://www.instagram.com/theodor.manolache?igsh=dG1zNXNvODdqanV0",
         facebookUrl: "https://www.facebook.com/share/1BDBGSUAFs/",
     },
-    {
-        name: "Ambasador 6",
-        photoSrc: "/ambasadori/Adi Nartea.jpg", // placeholder until photo added
-        instagramUrl: null,
-        facebookUrl: null,
-    },
 ];
 
 export default function AmbassadorsSection() {
@@ -46,10 +40,21 @@ export default function AmbassadorsSection() {
                 <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight">Ambasadori</h2>
                 <p className="mt-4 text-center text-lg text-slate-600">Oameni care susțin Endurance Ro-Index</p>
 
-                <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-                    {AMBASSADORS.map((a) => (
-                        <AmbassadorCard key={a.name} {...a} />
-                    ))}
+                <div className="mt-12 grid grid-cols-1 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
+                        {AMBASSADORS.filter(a => a.name === "Raluca Kisescu" || a.name === "Mari Fica").map((a) => (
+                            <div className="w-full max-w-sm" key={a.name}>
+                                <AmbassadorCard {...a} />
+                            </div>
+                        ))}
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+                        {AMBASSADORS.filter(a => a.name !== "Raluca Kisescu" && a.name !== "Mari Fica").map((a) => (
+                            <div className="w-full max-w-sm" key={a.name}>
+                                <AmbassadorCard {...a} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
