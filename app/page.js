@@ -5,6 +5,7 @@ import ParticipantsProfile from "./components/ParticipantsProfile";
 import InfographicsCarousel from "./components/InfographicsCarousel";
 import AmbassadorsSection from "./components/AmbassadorsSection";
 import EndingSection from "./components/EndingSection";
+import SocialEmbedsSection from "./components/SocialEmbedsSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <InfographicsCarousel />
       <AmbassadorsSection />
       <EndingSection />
+      <SocialEmbedsSection />
     </main>
   );
 }
