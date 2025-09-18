@@ -1,9 +1,21 @@
-import Image from "next/image";
+import Hero from "./components/Hero";
+import SportsStudied from "./components/SportsStudied";
+import AboutStudy from "./components/AboutStudy";
+import ParticipantsProfile from "./components/ParticipantsProfile";
+import InfographicsCarousel from "./components/InfographicsCarousel";
+import AmbassadorsSection from "./components/AmbassadorsSection";
+import EndingSection from "./components/EndingSection";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Endurance Ro-Index</h1>
-    </div>
+    <main>
+      <Hero />
+      <SportsStudied />
+      <AboutStudy />
+      <ParticipantsProfile />
+      <InfographicsCarousel />
+      <AmbassadorsSection />
+      <EndingSection />
+    </main>
   );
 }
