@@ -5,7 +5,7 @@ export default function AmbassadorCard({ name, photoSrc, instagramUrl, facebookU
     return (
         <article className="rounded-2xl bg-white shadow-xl ring-1 ring-slate-200 overflow-hidden">
             <div className="relative aspect-[4/5] w-full">
-                <Image src={photoSrc} alt={name} fill className="object-cover" />
+                <Image src={photoSrc} alt={name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw" className="object-cover" />
             </div>
             <div className="p-4 flex items-center justify-between gap-4">
                 <h3 className="text-lg font-semibold truncate" title={name}>{name}</h3>
