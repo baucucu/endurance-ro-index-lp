@@ -38,6 +38,18 @@ export default function SocialEmbedsSection({
             root.id = "fb-root";
             document.body.prepend(root);
         }
+
+        // Initialize Facebook SDK with error handling
+        window.fbAsyncInit = function () {
+            if (window.FB) {
+                window.FB.init({
+                    xfbml: true,
+                    version: 'v17.0'
+                });
+                console.log("Facebook SDK initialized");
+            }
+        };
+
         loadScriptOnce(
             "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0",
             "fb-sdk-js"
@@ -61,10 +73,52 @@ export default function SocialEmbedsSection({
                     const rows = json.table.rows
                         .map((r) => r.c?.[0]?.v)
                         .filter(Boolean)
-                        .map((html) => {
-                            // remove embedded IG script tag if present; we load it separately
-                            const cleaned = String(html).replace(/<script[^>]*instagram\.com\/embed\.js[\s\S]*?<\/script>/gi, "");
-                            return { platform: tab.toLowerCase(), html: cleaned };
+                        .map((rawHtml) => {
+                            // Always work with a string
+                            let html = String(rawHtml).trim();
+
+                            // Remove embedded IG script tag if present; we load it once globally
+                            html = html.replace(/<script[^>]*instagram\.com\/embed\.js[\s\S]*?<\/script>/gi, "");
+
+                            const platform = tab.toLowerCase();
+
+                            // Normalize Facebook: Accept either iframe plugin code or div.fb-post and rebuild a canonical iframe
+                            if (platform === "facebook") {
+                                try {
+                                    let postUrl = "";
+
+                                    // 1) If it's an iframe embed, extract the href parameter from src
+                                    const iframeSrcMatch = html.match(/<iframe[^>]*src="([^"]+)"/i);
+                                    if (iframeSrcMatch) {
+                                        const srcUrl = new URL(iframeSrcMatch[1]);
+                                        const hrefParam = srcUrl.searchParams.get("href");
+                                        if (hrefParam) postUrl = decodeURIComponent(hrefParam);
+                                    }
+
+                                    // 2) If it's an XFBML div embed, extract data-href
+                                    if (!postUrl) {
+                                        const dataHrefMatch = html.match(/data-href="([^"]+)"/i);
+                                        if (dataHrefMatch) postUrl = dataHrefMatch[1];
+                                    }
+
+                                    // 3) If it's a plain URL pasted, use it as-is
+                                    if (!postUrl) {
+                                        const plainUrlMatch = html.match(/https?:\/\/[\w\-.]+\.[^"'\s<>)]+/i);
+                                        if (plainUrlMatch) postUrl = plainUrlMatch[0];
+                                    }
+
+                                    if (postUrl) {
+                                        const canonical = `https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(
+                                            postUrl
+                                        )}&show_text=true&width=500`;
+                                        html = `<iframe src="${canonical}" width="500" height="420" style="border:none;overflow:hidden;width:100%;max-width:500px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`;
+                                    }
+                                } catch (err) {
+                                    console.warn("Failed to normalize Facebook embed", err);
+                                }
+                            }
+
+                            return { platform, html };
                         });
                     results.push(...rows);
                 } catch (e) {
@@ -72,6 +126,7 @@ export default function SocialEmbedsSection({
                     console.error("Failed to load tab", tab, e);
                 }
             }
+            console.log("Loaded posts:", results);
             setPosts(results);
         }
         fetchTabs();
@@ -80,20 +135,30 @@ export default function SocialEmbedsSection({
     useEffect(() => {
         // Re-process embeds after posts render
         if (typeof window !== "undefined") {
-            // Instagram
-            if (window.instgrm?.Embeds?.process) {
-                window.instgrm.Embeds.process();
-            }
-            // Facebook
-            if (window.FB?.XFBML?.parse) {
-                window.FB.XFBML.parse(containerRef.current || undefined);
-            }
-            // Make iframes responsive
-            const iframes = containerRef.current?.querySelectorAll("iframe") || [];
-            iframes.forEach((el) => {
-                el.style.width = "100%";
-                el.removeAttribute("width");
-            });
+            setTimeout(() => {
+                // Instagram
+                if (window.instgrm?.Embeds?.process) {
+                    console.log("Processing Instagram embeds...");
+                    window.instgrm.Embeds.process();
+                }
+                // Facebook XFBML embeds (for div-based embeds)
+                if (window.FB?.XFBML?.parse) {
+                    console.log("Processing Facebook XFBML embeds...");
+                    window.FB.XFBML.parse(containerRef.current || undefined);
+                }
+                // Handle Facebook iframe embeds (they don't need FB SDK processing)
+                const fbIframes = containerRef.current?.querySelectorAll("iframe[src*='facebook.com']") || [];
+                console.log(`Found ${fbIframes.length} Facebook iframe embeds`);
+
+                // Make all iframes responsive
+                const allIframes = containerRef.current?.querySelectorAll("iframe") || [];
+                console.log(`Found ${allIframes.length} total iframes to make responsive`);
+                allIframes.forEach((el) => {
+                    el.style.width = "100%";
+                    el.style.maxWidth = "500px";
+                    el.removeAttribute("width");
+                });
+            }, 1000);
         }
     }, [posts]);
 
@@ -130,10 +195,10 @@ export default function SocialEmbedsSection({
                     {igPosts.length > 0 && (
                         <div className="mt-12">
                             <h3 className="text-2xl font-bold mb-4">Instagram</h3>
-                            <div className="columns-2xs md:columns-3 gap-4 [column-fill:_balance]">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                                 {igPosts.map((p, idx) => (
-                                    <div key={`ig-${idx}`} className="mx-auto mb-4 w-full max-w-[16rem] sm:max-w-[18rem] break-inside-avoid">
-                                        <div dangerouslySetInnerHTML={{ __html: p.html }} />
+                                    <div key={`ig-${idx}`} className="w-full grid place-items-center">
+                                        <div className="w-[min(92vw,21rem)] sm:w-[min(44vw,22rem)]" dangerouslySetInnerHTML={{ __html: p.html }} />
                                     </div>
                                 ))}
                             </div>
@@ -143,10 +208,10 @@ export default function SocialEmbedsSection({
                     {fbPosts.length > 0 && (
                         <div className="mt-12">
                             <h3 className="text-2xl font-bold mb-4">Facebook</h3>
-                            <div className="columns-2xs md:columns-3 gap-4 [column-fill:_balance]">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                                 {fbPosts.map((p, idx) => (
-                                    <div key={`fb-${idx}`} className="mx-auto mb-4 w-full max-w-[16rem] sm:max-w-[18rem] break-inside-avoid">
-                                        <div dangerouslySetInnerHTML={{ __html: p.html }} />
+                                    <div key={`fb-${idx}`} className="w-full grid place-items-center">
+                                        <div className="w-[min(92vw,21rem)] sm:w-[min(44vw,22rem)]" dangerouslySetInnerHTML={{ __html: p.html }} />
                                     </div>
                                 ))}
                             </div>
