@@ -132,3 +132,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+section {
+  overflow-x: clip;
+}

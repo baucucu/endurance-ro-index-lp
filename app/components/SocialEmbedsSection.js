@@ -195,10 +195,10 @@ export default function SocialEmbedsSection({
                     {igPosts.length > 0 && (
                         <div className="mt-12">
                             <h3 className="text-2xl font-bold mb-4">Instagram</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full">
                                 {igPosts.map((p, idx) => (
                                     <div key={`ig-${idx}`} className="w-full grid place-items-center">
-                                        <div className="embed-card w-full max-w-[22rem] px-2" dangerouslySetInnerHTML={{ __html: p.html }} />
+                                        <div className="embed-card w-[min(92vw,22rem)] sm:w-[22rem] px-0 sm:px-2" dangerouslySetInnerHTML={{ __html: p.html }} />
                                     </div>
                                 ))}
                             </div>
@@ -208,16 +208,17 @@ export default function SocialEmbedsSection({
                     {fbPosts.length > 0 && (
                         <div className="mt-12">
                             <h3 className="text-2xl font-bold mb-4">Facebook</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full">
                                 {fbPosts.map((p, idx) => (
                                     <div key={`fb-${idx}`} className="w-full grid place-items-center">
-                                        <div className="embed-card w-full max-w-[22rem] px-2" dangerouslySetInnerHTML={{ __html: p.html }} />
+                                        <div className="embed-card w-[min(92vw,22rem)] sm:w-[22rem] px-0 sm:px-2" dangerouslySetInnerHTML={{ __html: p.html }} />
                                     </div>
                                 ))}
                             </div>
 
                             <style jsx global>{`
                     /* Ensure IG and FB embeds don't overflow and are centered */
+                    #social { overflow-x: hidden; }
                     #social .embed-card { margin-left: auto; margin-right: auto; }
                     #social .embed-card iframe { width: 100% !important; max-width: 100% !important; }
                     #social .embed-card blockquote.instagram-media { width: 100% !important; max-width: 100% !important; min-width: 0 !important; margin: 0 auto !important; }
