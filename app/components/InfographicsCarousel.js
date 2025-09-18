@@ -30,7 +30,7 @@ export default function InfographicsCarousel() {
 
                 <div className="relative mt-12">
                     <Carousel
-                        className="w-full h-[840px] sm:h-[960px]"
+                        className="w-full"
                         opts={{
                             align: "start",
                             // loop: true,
@@ -39,12 +39,10 @@ export default function InfographicsCarousel() {
                     >
                         <CarouselContent className="px-4">
                             {slides.map((src) => (
-                                <CarouselItem key={src} className="basis-[90%]">
-                                    <div className="h-full flex items-center">
-                                        <div className="w-full rounded-2xl bg-white p-3 shadow-lg ring-1 ring-slate-200/70">
-                                            <div className="relative w-full aspect-square overflow-hidden rounded-xl">
-                                                <Image src={src} alt="Infografic" fill className="object-contain" />
-                                            </div>
+                                <CarouselItem key={src} className="basis-full sm:basis-[90%] lg:basis-[85%]">
+                                    <div className="w-full rounded-2xl bg-white p-3 shadow-lg ring-1 ring-slate-200/70">
+                                        <div className="relative w-full aspect-square overflow-hidden rounded-xl">
+                                            <Image src={src} alt="Infografic" fill className="object-contain" />
                                         </div>
                                     </div>
                                 </CarouselItem>
