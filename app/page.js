@@ -14,9 +14,9 @@ export default function Home() {
       <Hero />
       <AboutStudy />
       <SportsStudied />
-      <ParticipantsProfile />
       <CompetitionsDistancesSection />
       <MindsetSection />
+      <ParticipantsProfile />
       <AmbassadorsSection />
       <EndingSection />
       <SocialEmbedsSection />
