@@ -1,4 +1,7 @@
+"use client";
 import { GraduationCap, UsersRound, Heart, Target, Zap, TrendingUp, Stethoscope, Dumbbell } from "lucide-react";
+import Image from "next/image";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const Card = ({ icon: Icon, value, label, colorClasses }) => (
     <div className="rounded-2xl bg-white p-8 shadow-xl ring-1 ring-slate-200">
@@ -30,6 +33,27 @@ export default function ParticipantsProfile() {
                     <Card icon={TrendingUp} value="75%" label="se informează despre concursuri pe Facebook" colorClasses={{ bg: "bg-sky-50", text: "text-sky-600" }} />
                     <Card icon={Stethoscope} value="72%" label="și-au făcut controale medicale de monitorizare" colorClasses={{ bg: "bg-rose-50", text: "text-rose-600" }} />
                     <Card icon={Dumbbell} value="69%" label="au abonamente la sală" colorClasses={{ bg: "bg-orange-50", text: "text-orange-600" }} />
+                </div>
+
+                {/* Profiles infographics carousel */}
+                <div className="mt-16 flex justify-center">
+                    <div className="w-[90vw] md:w-[calc(80vh*1.2)]">
+                        <Carousel className="w-full" opts={{ align: "center" }}>
+                            <CarouselContent className="py-4 -ml-2">
+                                {["/profiles/1.jpg", "/profiles/2.jpg"].map((src) => (
+                                    <CarouselItem key={src} className="basis-[83.33%] pl-2">
+                                        <div className="grid place-items-center">
+                                            <div className="inline-flex max-w-[90vw] md:max-w-[80vh] max-h-[80vh] rounded-2xl bg-white p-3 shadow-lg ring-1 ring-slate-200/70 overflow-hidden">
+                                                <Image src={src} alt="Profil infografic" width={1600} height={2000} className="h-auto w-auto max-w-full max-h-[76vh] object-contain" />
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </Carousel>
+                    </div>
                 </div>
             </div>
         </section>

@@ -198,7 +198,7 @@ export default function SocialEmbedsSection({
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                                 {igPosts.map((p, idx) => (
                                     <div key={`ig-${idx}`} className="w-full grid place-items-center">
-                                        <div className="w-[min(92vw,21rem)] sm:w-[min(44vw,22rem)]" dangerouslySetInnerHTML={{ __html: p.html }} />
+                                        <div className="embed-card w-full max-w-[22rem] px-2" dangerouslySetInnerHTML={{ __html: p.html }} />
                                     </div>
                                 ))}
                             </div>
@@ -211,10 +211,18 @@ export default function SocialEmbedsSection({
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
                                 {fbPosts.map((p, idx) => (
                                     <div key={`fb-${idx}`} className="w-full grid place-items-center">
-                                        <div className="w-[min(92vw,21rem)] sm:w-[min(44vw,22rem)]" dangerouslySetInnerHTML={{ __html: p.html }} />
+                                        <div className="embed-card w-full max-w-[22rem] px-2" dangerouslySetInnerHTML={{ __html: p.html }} />
                                     </div>
                                 ))}
                             </div>
+
+                            <style jsx global>{`
+                    /* Ensure IG and FB embeds don't overflow and are centered */
+                    #social .embed-card { margin-left: auto; margin-right: auto; }
+                    #social .embed-card iframe { width: 100% !important; max-width: 100% !important; }
+                    #social .embed-card blockquote.instagram-media { width: 100% !important; max-width: 100% !important; min-width: 0 !important; margin: 0 auto !important; }
+                    #social .embed-card blockquote.instagram-media * { max-width: 100% !important; }
+                `}</style>
                         </div>
                     )}
                 </div>
