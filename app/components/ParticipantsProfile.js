@@ -44,7 +44,7 @@ export default function ParticipantsProfile() {
                                     <CarouselItem key={src} className="basis-[83.33%] pl-2">
                                         <div className="grid place-items-center">
                                             <div className="inline-flex max-w-[90vw] md:max-w-[80vh] max-h-[80vh] rounded-2xl bg-white p-3 shadow-lg ring-1 ring-slate-200/70 overflow-hidden">
-                                                <Image src={src} alt="Profil infografic" width={1600} height={2000} className="h-auto w-auto max-w-full max-h-[76vh] object-contain" />
+                                                <Image src={src} alt="Profil infografic" width={1600} height={2000} className="h-auto w-auto max-w-full max-h-[76vh] object-contain rounded-xl" />
                                             </div>
                                         </div>
                                     </CarouselItem>
