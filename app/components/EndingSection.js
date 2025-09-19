@@ -23,23 +23,21 @@ export default function EndingSection() {
                     Misiunea Studiului
                 </h2>
                 <p className="mt-6 text-center max-w-3xl mx-auto text-lg sm:text-xl text-white/90">
-                    Endurance Ro-Index își propune să devină un reper anual pentru ecosistemul sporturilor de anduranță
-                    din România: o sursă de încredere pentru date, un instrument de marketing relevant, și un barometru al
-                    fenomenului sportiv.
+                    Endurance Ro-Index își propune să devină un reper pentru ecosistemul sporturilor de masă din România: o sursă de încredere pentru date, un instrument folositor organizatorilor de concursuri și un barometru al fenomenului sportiv.
                 </p>
 
                 <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
                     <div className="rounded-2xl bg-white/10 p-6 ring-1 ring-white/20 backdrop-blur-sm">
                         <h3 className="text-xl font-semibold">Sursă de Încredere</h3>
-                        <p className="mt-2 text-white/90">Un liant al ecosistemului, oferind cifre și date statistice pentru toți actorii implicați.</p>
-                    </div>
-                    <div className="rounded-2xl bg-white/10 p-6 ring-1 ring-white/20 backdrop-blur-sm">
-                        <h3 className="text-xl font-semibold">Instrument Marketing</h3>
-                        <p className="mt-2 text-white/90">Deschizător de drumuri pentru idei noi, branding sănătos și comunicare relevantă.</p>
+                        <p className="mt-2 text-white/90">O platformă de know-how care ajută organizatorii și tot ecosistemul din jurul concursurilor. Aduce date pe agenda publică despre fenomenul sportului de masă.</p>
                     </div>
                     <div className="rounded-2xl bg-white/10 p-6 ring-1 ring-white/20 backdrop-blur-sm">
                         <h3 className="text-xl font-semibold">Barometru de Sport</h3>
-                        <p className="mt-2 text-white/90">Un indicator al creșterii fenomenului și al sănătății competiționale la nivel național.</p>
+                        <p className="mt-2 text-white/90">Contribuie la creșterea fenomenului, un adevărat barometru de competitivitate și sănătate națională.</p>
+                    </div>
+                    <div className="rounded-2xl bg-white/10 p-6 ring-1 ring-white/20 backdrop-blur-sm">
+                        <h3 className="text-xl font-semibold">Instrument de Sustenabilitate</h3>
+                        <p className="mt-2 text-white/90">Deschizător de drumuri pentru idei noi, branding sănătos și comunicare relevantă.</p>
                     </div>
                 </div>
 

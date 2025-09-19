@@ -5,13 +5,10 @@ export default function AboutStudy() {
         <section id="despre" className="py-24 bg-gradient-to-b from-sky-50 to-white">
             <div className="mx-auto max-w-6xl px-6 sm:px-8">
                 <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight">
-                    Despre Studiu
+                    Despre Endurance Ro-Index 2025
                 </h2>
                 <p className="mt-6 text-center text-lg text-slate-600 max-w-4xl mx-auto">
-                    Studiul Endurance Ro-Index 2025 este primul studiu anual dedicat sporturilor de
-                    anduranță din România. Realizat pe un eșantion de <strong>1.110 respondenți</strong>
-                    de peste 15 ani, studiul oferă o perspectivă completă asupra participanților la
-                    competițiile de alergare, ciclism și triatlon.
+                    Ediția de lansare din 2025 a evaluat participarea și concurenții la evenimentele din 2024 și surprinde perspective utile pentru toți actorii implicați- organizatorii curselor, sponsori ai evenimentelor, branduri și industrii cointeresate, presa de specialitate sport-lifestyle-sănătate, sau autorități.  Studiul se va desfășura anual.
                 </p>
 
                 <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -20,7 +17,7 @@ export default function AboutStudy() {
                             <Users className="size-7" aria-hidden />
                         </div>
                         <p className="mt-6 text-center text-3xl font-extrabold">1.110</p>
-                        <p className="mt-2 text-center text-slate-600">Respondenți peste 15 ani</p>
+                        <p className="mt-2 text-center text-slate-600">concurenți</p>
                     </div>
 
                     <div className="rounded-2xl bg-white p-8 shadow-xl ring-1 ring-slate-200">
@@ -36,7 +33,7 @@ export default function AboutStudy() {
                             <CalendarDays className="size-7" aria-hidden />
                         </div>
                         <p className="mt-6 text-center text-3xl font-extrabold">2024</p>
-                        <p className="mt-2 text-center text-slate-600">Anul evaluat în studiu</p>
+                        <p className="mt-2 text-center text-slate-600">Anul evaluat în studiul din 2025</p>
                     </div>
                 </div>
             </div>

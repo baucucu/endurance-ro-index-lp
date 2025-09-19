@@ -40,8 +40,7 @@ export default function Hero() {
                 </h1>
 
                 <p className="mt-6 max-w-3xl text-lg sm:text-xl text-white/90">
-                    Perspective complete asupra comunității sporturilor de anduranță din România -
-                    participanți la alergare, ciclism și triatlon în 2024
+                    Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-4">

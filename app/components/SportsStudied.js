@@ -3,7 +3,7 @@ export default function SportsStudied() {
         <section id="sporturi" className="py-20">
             <div className="mx-auto max-w-6xl px-6 sm:px-8">
                 <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight">
-                    Sporturile Studiate
+                    Sporturi Studiate
                 </h2>
                 <p className="mt-4 text-center text-lg text-slate-500">
                     Trei discipline de anduranță care definesc comunitatea sportivă din România
@@ -21,7 +21,7 @@ export default function SportsStudied() {
                         <div className="absolute left-6 right-6 bottom-6 text-white">
                             <h3 className="text-3xl font-bold drop-shadow">Alergare</h3>
                             <p className="mt-2 text-white/90 drop-shadow">
-                                Competiții de alergare și maratoane
+                                Competiții de șosea & trail
                             </p>
                         </div>
                     </article>
@@ -37,7 +37,7 @@ export default function SportsStudied() {
                         <div className="absolute left-6 right-6 bottom-6 text-white">
                             <h3 className="text-3xl font-bold drop-shadow">Ciclism</h3>
                             <p className="mt-2 text-white/90 drop-shadow">
-                                Curse de ciclism și competiții pe șosea
+                                Ciclism- Curse MTB/trail & de șosea
                             </p>
                         </div>
                     </article>
