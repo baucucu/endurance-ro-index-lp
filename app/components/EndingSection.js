@@ -6,6 +6,23 @@ import RequestStudyDialog from "./RequestStudyDialog";
 
 export default function EndingSection() {
     const [open, setOpen] = useState(false);
+    const organizers = [
+        "ACS Club 21",
+        "ACS Echipmont",
+        "ACS Fara Asfalt",
+        "Asociatia Club Sportiv Pro Cycling",
+        "Bikexpert",
+        "CS Alergotura",
+        "FC Galati",
+        "Fundatia Comunitara Sibiu",
+        "Mures Runners",
+        "Runners Club",
+        "Running Media",
+        "Salvati Copii Iasi",
+        "Smartatletic",
+        "Team Run",
+        "YOLO Events",
+    ];
     return (
         <section className="relative w-full isolate overflow-hidden">
             <div className="absolute inset-0 -z-10">
@@ -75,6 +92,19 @@ export default function EndingSection() {
                         </a>
                     </div>
                 </div>
+
+                <h3 className="mt-14 text-center text-2xl sm:text-3xl font-bold">Parteneri Organizatori de Competiții</h3>
+                <ul className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4" aria-label="Parteneri organizatori de competiții">
+                    {organizers.map((name) => (
+                        <li
+                            key={name}
+                            title={name}
+                            className="rounded-full bg-white/10 ring-1 ring-white/20 backdrop-blur-sm px-4 py-2 min-h-16 flex items-center justify-center text-center leading-tight text-sm sm:text-base text-white/90"
+                        >
+                            {name}
+                        </li>
+                    ))}
+                </ul>
 
                 <div className="mt-12 flex justify-center">
                     <button
