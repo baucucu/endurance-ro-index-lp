@@ -27,7 +27,7 @@ const AMBASSADORS = [
     },
     {
         name: "Theo Manolache",
-        photoSrc: "/ambasadori/Theo Manolache.png", // placeholder until photo added
+        photoSrc: "/ambasadori/Theo Manolache.jpg", // placeholder until photo added
         instagramUrl: "https://www.instagram.com/theodor.manolache?igsh=dG1zNXNvODdqanV0",
         facebookUrl: "https://www.facebook.com/share/1BDBGSUAFs/",
     },
@@ -37,8 +37,8 @@ export default function AmbassadorsSection() {
     return (
         <section id="ambasadori" className="py-24">
             <div className="mx-auto max-w-6xl px-6 sm:px-8">
-                <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight">Ambasadori</h2>
-                <p className="mt-4 text-center text-lg text-slate-600">Oameni care susțin Endurance Ro-Index</p>
+                <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0f3e5e]">Ambasadori</h2>
+                <p className="mt-4 text-center text-lg text-[#0f3e5e]">Oameni care susțin Endurance Ro-Index</p>
 
                 <div className="mt-12 grid grid-cols-1 gap-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 place-items-center">

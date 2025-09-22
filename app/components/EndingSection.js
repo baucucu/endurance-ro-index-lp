@@ -41,7 +41,7 @@ export default function EndingSection() {
                     </div>
                 </div>
 
-                <h3 className="mt-14 text-center text-2xl sm:text-3xl font-bold">Partenerii Studiului</h3>
+                <h3 className="mt-14 text-center text-2xl sm:text-3xl font-bold">Inițiatorii Endurance Ro-Index</h3>
                 <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
                     <div className="rounded-2xl bg-white/10 p-6 ring-1 ring-white/20 backdrop-blur-sm flex items-center justify-between">
                         <div>
@@ -80,10 +80,10 @@ export default function EndingSection() {
                     <button
                         type="button"
                         onClick={() => setOpen(true)}
-                        className="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-6 py-3 text-base font-semibold text-slate-900 hover:bg-yellow-300"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#6599b2] px-6 py-3 text-base font-semibold text-white hover:bg-[#1ab6ce]/90"
                     >
                         <ClipboardList className="size-5" aria-hidden />
-                        Solicita studiul
+                        Solicită Raportul
                     </button>
                 </div>
             </div>

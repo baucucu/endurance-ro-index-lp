@@ -2,10 +2,10 @@ export default function SportsStudied() {
     return (
         <section id="sporturi" className="py-20">
             <div className="mx-auto max-w-6xl px-6 sm:px-8">
-                <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight">
+                <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0f3e5e]">
                     Sporturi Studiate
                 </h2>
-                <p className="mt-4 text-center text-lg text-slate-500">
+                <p className="mt-4 text-center text-lg text-[#0f3e5e]">
                     Trei discipline de anduranță care definesc comunitatea sportivă din România
                 </p>
 
@@ -37,7 +37,7 @@ export default function SportsStudied() {
                         <div className="absolute left-6 right-6 bottom-6 text-white">
                             <h3 className="text-3xl font-bold drop-shadow">Ciclism</h3>
                             <p className="mt-2 text-white/90 drop-shadow">
-                                Ciclism- Curse MTB/trail & de șosea
+                                Curse MTB/trail & de șosea
                             </p>
                         </div>
                     </article>

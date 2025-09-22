@@ -168,8 +168,8 @@ export default function SocialEmbedsSection({
         return (
             <section id="social" className="py-24">
                 <div className="mx-auto max-w-6xl px-6 sm:px-8">
-                    <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight">Postări din Social Media</h2>
-                    <p className="mt-4 text-center text-lg text-slate-600">
+                    <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0f3e5e]">Postări din Social Media</h2>
+                    <p className="mt-4 text-center text-lg text-[#0f3e5e]">
                         Configurează variabila de mediu <code>NEXT_PUBLIC_SOCIAL_SHEET_ID</code> cu ID-ul Google Sheet-ului public
                         (coloane: <code>url</code>, opțional <code>platform</code>), apoi reîncarcă pagina.
                     </p>
@@ -188,13 +188,13 @@ export default function SocialEmbedsSection({
     return (
         <section id="social" className="py-24">
             <div className="mx-auto max-w-6xl px-6 sm:px-8">
-                <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight">Postări din Social Media</h2>
-                <p className="mt-4 text-center text-lg text-slate-600">Selectate de pe Instagram și Facebook</p>
+                <h2 className="text-center text-4xl sm:text-5xl font-extrabold tracking-tight text-[#0f3e5e]">Postări din Social Media</h2>
+                <p className="mt-4 text-center text-lg text-[#0f3e5e]">Selectate de pe Instagram și Facebook</p>
 
                 <div ref={containerRef}>
                     {igPosts.length > 0 && (
                         <div className="mt-12">
-                            <h3 className="text-2xl font-bold mb-4">Instagram</h3>
+                            <h3 className="text-2xl font-bold mb-4 text-[#0f3e5e]">Instagram</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full">
                                 {igPosts.map((p, idx) => (
                                     <div key={`ig-${idx}`} className="w-full grid place-items-center">
@@ -207,7 +207,7 @@ export default function SocialEmbedsSection({
 
                     {fbPosts.length > 0 && (
                         <div className="mt-12">
-                            <h3 className="text-2xl font-bold mb-4">Facebook</h3>
+                            <h3 className="text-2xl font-bold mb-4 text-[#0f3e5e]">Facebook</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center w-full">
                                 {fbPosts.map((p, idx) => (
                                     <div key={`fb-${idx}`} className="w-full grid place-items-center">

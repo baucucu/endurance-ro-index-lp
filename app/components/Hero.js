@@ -34,7 +34,7 @@ export default function Hero() {
                     {/* <span className="block text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
                         AMBASADORI
                     </span> */}
-                    <span className="mt-2 block text-4xl sm:text-5xl md:text-6xl font-extrabold text-yellow-400">
+                    <span className="mt-2 block text-4xl sm:text-5xl md:text-6xl font-extrabold text-white-90 opacity-80">
                         Endurance Ro-Index
                     </span>
                 </h1>
@@ -56,10 +56,10 @@ export default function Hero() {
                     <button
                         type="button"
                         onClick={() => setRequestOpen(true)}
-                        className="inline-flex items-center gap-2 rounded-full bg-yellow-400 px-5 py-3 text-base font-semibold text-slate-900 hover:bg-yellow-300"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#6599b2] px-5 py-3 text-base font-semibold text-white hover:bg-[#1ab6ce]/90"
                     >
                         <ClipboardList className="size-5" aria-hidden />
-                        Solicita studiul
+                        Solicită Raportul
                     </button>
                 </div>
             </div>
