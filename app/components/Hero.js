@@ -24,6 +24,17 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/70 via-slate-900/50 to-emerald-900/40" />
             </div>
 
+            <div className="absolute right-4 top-4 z-10 flex flex-col sm:flex-row gap-2 text-white">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sm:text-sm ring-1 ring-white/20 backdrop-blur-sm">
+                    Organizatori de concursuri de masă
+                    <a href="tel:0741040219" className="font-semibold text-white">0741.040.219</a>
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sm:text-sm ring-1 ring-white/20 backdrop-blur-sm">
+                    Parteneri ai Endurance & Comercial
+                    <a href="tel:0724534232" className="font-semibold text-white">0724.534.232</a>
+                </span>
+            </div>
+
             <div className="mx-auto max-w-6xl px-6 sm:px-8 pt-28 pb-20 text-white">
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium ring-1 ring-white/25 backdrop-blur-md">
                     <CalendarDays className="size-4" aria-hidden />

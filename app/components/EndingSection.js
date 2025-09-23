@@ -106,6 +106,12 @@ export default function EndingSection() {
                     ))}
                 </ul>
 
+                <div className="mt-6 mx-auto max-w-4xl">
+                    <p className="text-center text-base sm:text-lg text-white/90 rounded-2xl bg-white/10 ring-1 ring-white/20 backdrop-blur-sm px-5 py-4">
+                        Dacă ești organizator de competiții de alergare, ciclism sau triatlon și nu te regăsești în lista de mai sus, hai să ne cunoaștem și să devii partener pentru Endurance Ro-Index 2026. Vei primi gratuit un extras al Raportului, inclusiv date personalizate pentru evenimentele tale.
+                    </p>
+                </div>
+
                 <div className="mt-12 flex justify-center">
                     <button
                         type="button"
@@ -115,6 +121,17 @@ export default function EndingSection() {
                         <ClipboardList className="size-5" aria-hidden />
                         Solicită Raportul
                     </button>
+                </div>
+
+                <div className="mt-6 flex flex-col sm:flex-row justify-center gap-2">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm ring-1 ring-white/20 backdrop-blur-sm">
+                        Organizatori de concursuri de masă
+                        <a href="tel:0741040219" className="font-semibold text-white">0741.040.219</a>
+                    </span>
+                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm ring-1 ring-white/20 backdrop-blur-sm">
+                        Parteneri ai Endurance & Comercial
+                        <a href="tel:0724534232" className="font-semibold text-white">0724.534.232</a>
+                    </span>
                 </div>
             </div>
             <RequestStudyDialog isOpen={open} onClose={() => setOpen(false)} />
