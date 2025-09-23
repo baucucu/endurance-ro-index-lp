@@ -47,7 +47,7 @@ export default function AmbassadorsSection() {
                 <p className="mt-4 text-center text-lg text-[#0f3e5e]">Oameni care susțin Endurance Ro-Index</p>
 
                 <div className="mt-12 grid grid-cols-1 gap-8">
-                    <div className="grid grid-cols-2 lg:grid-cols-6 gap-8 place-items-center">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
                         {AMBASSADORS.map((a) => (
                             <div className="w-full max-w-sm" key={a.name}>
                                 <AmbassadorCard {...a} />
