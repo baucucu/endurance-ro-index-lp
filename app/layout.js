@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Endurance Ro-Index",
-  description: "",
+  description: "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.",
 };
 
 export default function RootLayout({ children }) {
