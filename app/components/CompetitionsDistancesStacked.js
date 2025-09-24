@@ -11,7 +11,7 @@ export default function CompetitionsDistancesStacked() {
         <section id="tip-competitii-distante" className="py-24 bg-white">
             <div className="mx-auto max-w-6xl px-6 sm:px-8">
                 <h2 className="text-center text-4xl sm:text-5xl pb-8 font-extrabold tracking-tight text-[#0f3e5e]">
-                    Tip competiții & distanțe
+                    Tip de competiții & distanțe
                 </h2>
 
                 <div className="mt-6 mx-auto max-w-4xl space-y-10">
