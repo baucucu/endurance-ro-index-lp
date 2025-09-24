@@ -25,10 +25,10 @@ export default function Hero() {
             </div>
 
             <div className="absolute right-4 top-4 z-10 flex flex-col sm:flex-row gap-2 text-white">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sm:text-sm ring-1 ring-white/20 backdrop-blur-sm">
+                {/* <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sm:text-sm ring-1 ring-white/20 backdrop-blur-sm">
                     Organizatori de concursuri de masă
                     <a href="tel:0741040219" className="font-semibold text-white">0741.040.219</a>
-                </span>
+                </span> */}
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs sm:text-sm ring-1 ring-white/20 backdrop-blur-sm">
                     Parteneri ai Endurance & Comercial
                     <a href="tel:0724534232" className="font-semibold text-white">0724.534.232</a>
