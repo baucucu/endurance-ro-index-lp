@@ -23,6 +23,15 @@ export const metadata = {
       { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
     ],
     apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+    manifest: "/site.webmanifest",
+    other: {
+      "msapplication-TileColor": "#ffffff",
+      "msapplication-TileImage": "/favicon-32x32.png",
+      "theme-color": "#ffffff",
+    },
+    android: "/android-chrome-192x192.png",
+    androidLarge: "/android-chrome-512x512.png",
   },
 };
 
