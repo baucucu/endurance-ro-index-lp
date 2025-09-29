@@ -15,25 +15,27 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Endurance Ro-Index",
-  description: "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.",
+  description:
+    "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
       { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/android-chrome-192x192.png", type: "image/png", sizes: "192x192" },
+      { url: "/android-chrome-512x512.png", type: "image/png", sizes: "512x512" },
     ],
-    apple: "/apple-touch-icon.png",
     shortcut: "/favicon.ico",
-    manifest: "/site.webmanifest",
-    other: {
-      "msapplication-TileColor": "#ffffff",
-      "msapplication-TileImage": "/favicon-32x32.png",
-      "theme-color": "#ffffff",
-    },
-    android: "/android-chrome-192x192.png",
-    androidLarge: "/android-chrome-512x512.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  other: {
+    "theme-color": "#ffffff",
+    "msapplication-TileColor": "#ffffff",
+    "msapplication-TileImage": "/favicon-32x32.png",
   },
 };
+
 
 export default function RootLayout({ children }) {
   return (
