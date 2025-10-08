@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script";
+import StructuredData from "./components/StructuredData";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,11 +16,68 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://endurance-index.ro"),
-  title: "Endurance Ro-Index",
+  title: {
+    default: "Endurance Ro-Index 2025 | Studiu de cercetare despre sporturile de anduranță din România",
+    template: "%s | Endurance Ro-Index"
+  },
   description:
-    "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.",
+    "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon. Studiu de cercetare 2025 cu 1.110 concurenți, 54 concursuri și 242 branduri relevante.",
+  keywords: [
+    "endurance sports Romania",
+    "alergare România",
+    "ciclism România",
+    "triatlon România",
+    "concursuri de masă",
+    "studiu de cercetare sportivă",
+    "sporturi de anduranță",
+    "participanți concursuri",
+    "statistici sport România",
+    "endurance index"
+  ],
+  authors: [{ name: "Quantix Marketing Consulting" }],
+  creator: "Quantix Marketing Consulting",
+  publisher: "Endurance Ro-Index",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "ro_RO",
+    url: "https://endurance-index.ro",
+    siteName: "Endurance Ro-Index",
+    title: "Endurance Ro-Index 2025 | Studiu de cercetare despre sporturile de anduranță din România",
+    description: "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon. Studiu de cercetare 2025 cu 1.110 concurenți, 54 concursuri și 242 branduri relevante.",
+    images: [
+      {
+        url: "/images-sitemap.xml",
+        width: 1200,
+        height: 630,
+        alt: "Endurance Ro-Index - Studiu de cercetare despre sporturile de anduranță din România",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Endurance Ro-Index 2025 | Studiu de cercetare despre sporturile de anduranță din România",
+    description: "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.",
+    images: ["/images-sitemap.xml"],
+    creator: "@endurance_ro_index",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: [
@@ -34,8 +92,8 @@ export const metadata = {
   },
   manifest: "/site.webmanifest",
   other: {
-    "theme-color": "#ffffff",
-    "msapplication-TileColor": "#ffffff",
+    "theme-color": "#0f3e5e",
+    "msapplication-TileColor": "#0f3e5e",
     "msapplication-TileImage": "/favicon-32x32.png",
   },
 };
@@ -43,7 +101,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <head>
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -59,33 +117,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileColor" content="#0f3e5e" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:image" content="<generated>" />
-        <meta property="og:image:type" content="<generated>" />
-        <meta property="og:image:width" content="<generated>" />
-        <meta property="og:image:height" content="<generated>" />
-        <meta property="og:title" content="<generated>" />
-        <meta property="og:description" content="<generated>" />
-        <meta property="og:url" content="<generated>" />
-        <meta property="og:site_name" content="<generated>" />
-        <meta property="og:type" content="<generated>" />
-        <meta property="og:locale" content="<generated>" />
-        <meta name="twitter:image" content="<generated>" />
-        <meta name="twitter:image:type" content="<generated>" />
-        <meta name="twitter:image:width" content="<generated>" />
-        <meta name="twitter:image:height" content="<generated>" />
-        <meta name="twitter:title" content="<generated>" />
-        <meta name="twitter:description" content="<generated>" />
-        <meta name="twitter:url" content="<generated>" />
-        <meta name="twitter:site" content="<generated>" />
-        <meta name="twitter:card" content="<generated>" />
-        <meta name="twitter:creator" content="<generated>" />
+        <meta name="theme-color" content="#0f3e5e" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData />
         {children}
         {/* Google Analytics */}
         <Script

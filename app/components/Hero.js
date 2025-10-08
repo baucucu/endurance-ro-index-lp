@@ -18,11 +18,12 @@ export default function Hero() {
             <div className="absolute inset-0 -z-10">
                 <Image
                     src="https://images.unsplash.com/photo-1576858574144-9ae1ebcf5ae5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Sportivi alergând pe lângă lac"
+                    alt="Sportivi alergând pe lângă lac în cadrul unei competiții de anduranță din România - Endurance Ro-Index studiu 2025"
                     fill
                     priority
                     className="object-cover"
                     sizes="100vw"
+                    title="Endurance Ro-Index - Studiu de cercetare despre sporturile de anduranță din România"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/70 via-slate-900/50 to-emerald-900/40" />
             </div>
@@ -54,7 +55,7 @@ export default function Hero() {
                 </h1>
 
                 <p className="mt-6 max-w-3xl text-lg sm:text-xl text-white/90">
-                    Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.
+                    Prima platformă de date din România despre participarea și participanții la concursuri de masă - <a href="#sporturi" className="text-white underline hover:text-white/80 transition-colors">alergare, ciclism, triatlon</a>.
                 </p>
 
                 <div className="mt-10 flex flex-wrap gap-4">
