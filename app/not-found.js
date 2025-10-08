@@ -1,16 +1,20 @@
+"use client";
 import Link from 'next/link';
 import { Home, ArrowLeft, Search } from 'lucide-react';
-
-export const metadata = {
-    title: 'Pagina nu a fost găsită | 404',
-    description: 'Pagina pe care o căutați nu există. Explorați Endurance Ro-Index pentru studii de cercetare despre sporturile de anduranță din România.',
-    robots: {
-        index: false,
-        follow: true,
-    },
-};
+import { useEffect } from 'react';
 
 export default function NotFound() {
+    useEffect(() => {
+        // Set page title
+        document.title = 'Pagina nu a fost găsită | 404 - Endurance Ro-Index';
+
+        // Set meta description
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 'Pagina pe care o căutați nu există. Explorați Endurance Ro-Index pentru studii de cercetare despre sporturile de anduranță din România.');
+        }
+    }, []);
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-sky-50 to-white flex items-center justify-center px-4">
             <div className="max-w-2xl mx-auto text-center">
