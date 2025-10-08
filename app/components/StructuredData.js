@@ -103,8 +103,12 @@ export default function StructuredData() {
                 ],
                 "temporalCoverage": "2024",
                 "spatialCoverage": {
-                    "@type": "Country",
-                    "name": "România"
+                    "@type": "Place",
+                    "name": "România",
+                    "containedInPlace": {
+                        "@type": "Country",
+                        "name": "România"
+                    }
                 },
                 "inLanguage": "ro-RO"
             },
@@ -139,9 +143,13 @@ export default function StructuredData() {
                 "name": "Endurance Ro-Index 2025 Dataset",
                 "description": "Date despre participarea la concursuri de masă din România în 2024",
                 "url": "https://endurance-index.ro/",
+                "creator": {
+                    "@id": "https://endurance-index.ro/#organization"
+                },
                 "publisher": {
                     "@id": "https://endurance-index.ro/#organization"
                 },
+                "license": "https://endurance-index.ro/license",
                 "keywords": [
                     "sporturi de anduranță",
                     "concursuri de masă",
@@ -153,8 +161,12 @@ export default function StructuredData() {
                 ],
                 "temporalCoverage": "2024",
                 "spatialCoverage": {
-                    "@type": "Country",
-                    "name": "România"
+                    "@type": "Place",
+                    "name": "România",
+                    "containedInPlace": {
+                        "@type": "Country",
+                        "name": "România"
+                    }
                 },
                 "distribution": [
                     {
