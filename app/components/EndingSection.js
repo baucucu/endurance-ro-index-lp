@@ -1,6 +1,7 @@
 "use client";
 import { Globe } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 import { ClipboardList } from "lucide-react";
 import RequestStudyDialog from "./RequestStudyDialog";
 
@@ -26,11 +27,12 @@ export default function EndingSection() {
     return (
         <section className="relative w-full isolate overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <img
-                    // src="https://images.unsplash.com/photo-1520975922284-9e0ce82759a5?q=80&w=2070&auto=format&fit=crop"
+                <Image
                     src="https://images.unsplash.com/photo-1627156399021-721b0f720f8d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Atleți pe pistă"
-                    className="h-full w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/50 to-slate-800/30" />
             </div>

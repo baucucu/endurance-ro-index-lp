@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { CalendarDays, BarChart2, ClipboardList } from "lucide-react";
 import RequestStudyDialog from "./RequestStudyDialog";
 
@@ -15,11 +16,13 @@ export default function Hero() {
     return (
         <section className="relative w-full min-h-[80vh] isolate overflow-hidden">
             <div className="absolute inset-0 -z-10">
-                <img
-                    // src="https://images.unsplash.com/photo-1588038265723-9bd2a2b03a82?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                <Image
                     src="https://images.unsplash.com/photo-1576858574144-9ae1ebcf5ae5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Sportivi alergând pe lângă lac"
-                    className="h-full w-full object-cover"
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-indigo-900/70 via-slate-900/50 to-emerald-900/40" />
             </div>
