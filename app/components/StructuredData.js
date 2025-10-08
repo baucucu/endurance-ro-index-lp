@@ -166,6 +166,133 @@ export default function StructuredData() {
                     }
                 ],
                 "inLanguage": "ro-RO"
+            },
+            {
+                "@type": "Person",
+                "@id": "https://endurance-index.ro/#alex-corneschi",
+                "name": "Alex Corneschi",
+                "description": "Ambasador Endurance Ro-Index",
+                "url": "https://endurance-index.ro/#ambasadori",
+                "image": "https://endurance-index.ro/ambasadori/Alex Corneschi.png",
+                "sameAs": [
+                    "https://www.instagram.com/corneschi.alex",
+                    "https://www.facebook.com/share/1C3YVtPvQE/"
+                ],
+                "jobTitle": "Ambasador Endurance Ro-Index",
+                "worksFor": {
+                    "@id": "https://endurance-index.ro/#organization"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://endurance-index.ro/#adrian-nartea",
+                "name": "Adrian Nartea",
+                "description": "Ambasador Endurance Ro-Index",
+                "url": "https://endurance-index.ro/#ambasadori",
+                "image": "https://endurance-index.ro/ambasadori/Adi Nartea.jpg",
+                "sameAs": [
+                    "https://www.instagram.com/adinartea",
+                    "https://www.facebook.com/share/15k5ffJDbb/"
+                ],
+                "jobTitle": "Ambasador Endurance Ro-Index",
+                "worksFor": {
+                    "@id": "https://endurance-index.ro/#organization"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://endurance-index.ro/#raluca-kisescu",
+                "name": "Raluca Kisescu",
+                "description": "Ambasador Endurance Ro-Index",
+                "url": "https://endurance-index.ro/#ambasadori",
+                "image": "https://endurance-index.ro/ambasadori/Raluca Kisescu.jpg",
+                "sameAs": [
+                    "https://www.instagram.com/ralucakisescu",
+                    "https://www.facebook.com/share/1J6kuqwLZw/"
+                ],
+                "jobTitle": "Ambasador Endurance Ro-Index",
+                "worksFor": {
+                    "@id": "https://endurance-index.ro/#organization"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://endurance-index.ro/#mari-fica",
+                "name": "Mari Fica",
+                "description": "Ambasador Endurance Ro-Index",
+                "url": "https://endurance-index.ro/#ambasadori",
+                "image": "https://endurance-index.ro/ambasadori/Mari Fica.jpg",
+                "sameAs": [
+                    "https://www.instagram.com/fica.mari"
+                ],
+                "jobTitle": "Ambasador Endurance Ro-Index",
+                "worksFor": {
+                    "@id": "https://endurance-index.ro/#organization"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://endurance-index.ro/#theo-manolache",
+                "name": "Theo Manolache",
+                "description": "Ambasador Endurance Ro-Index",
+                "url": "https://endurance-index.ro/#ambasadori",
+                "image": "https://endurance-index.ro/ambasadori/Theo Manolache.jpg",
+                "sameAs": [
+                    "https://www.instagram.com/theodor.manolache",
+                    "https://www.facebook.com/share/1BDBGSUAFs/"
+                ],
+                "jobTitle": "Ambasador Endurance Ro-Index",
+                "worksFor": {
+                    "@id": "https://endurance-index.ro/#organization"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://endurance-index.ro/#andrei-nourescu",
+                "name": "Andrei Nourescu",
+                "description": "Ambasador Endurance Ro-Index",
+                "url": "https://endurance-index.ro/#ambasadori",
+                "image": "https://endurance-index.ro/ambasadori/Andrei Nourescu.jpg",
+                "sameAs": [
+                    "https://www.instagram.com/andreinourescu",
+                    "https://www.facebook.com/share/1Cu5FAx1z3/"
+                ],
+                "jobTitle": "Ambasador Endurance Ro-Index",
+                "worksFor": {
+                    "@id": "https://endurance-index.ro/#organization"
+                }
+            },
+            {
+                "@type": "Article",
+                "@id": "https://endurance-index.ro/#article",
+                "headline": "Endurance Ro-Index 2025 | Studiu de cercetare despre sporturile de anduranță din România",
+                "description": "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon. Studiu de cercetare 2025 cu 1.110 concurenți, 54 concursuri și 242 branduri relevante.",
+                "url": "https://endurance-index.ro/",
+                "datePublished": "2025-01-01",
+                "dateModified": "2025-01-01",
+                "author": {
+                    "@id": "https://endurance-index.ro/#organization"
+                },
+                "publisher": {
+                    "@id": "https://endurance-index.ro/#organization"
+                },
+                "mainEntityOfPage": {
+                    "@id": "https://endurance-index.ro/#webpage"
+                },
+                "image": "https://endurance-index.ro/opengraph-image.png",
+                "keywords": [
+                    "endurance sports Romania",
+                    "alergare România",
+                    "ciclism România",
+                    "triatlon România",
+                    "concursuri de masă",
+                    "studiu de cercetare sportivă",
+                    "sporturi de anduranță",
+                    "participanți concursuri",
+                    "statistici sport România",
+                    "endurance index"
+                ],
+                "inLanguage": "ro-RO"
             }
         ]
     };

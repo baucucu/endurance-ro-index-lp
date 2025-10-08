@@ -55,7 +55,7 @@ export const metadata = {
     description: "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon. Studiu de cercetare 2025 cu 1.110 concurenți, 54 concursuri și 242 branduri relevante.",
     images: [
       {
-        url: "/images-sitemap.xml",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "Endurance Ro-Index - Studiu de cercetare despre sporturile de anduranță din România",
@@ -66,7 +66,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Endurance Ro-Index 2025 | Studiu de cercetare despre sporturile de anduranță din România",
     description: "Prima platformă de date din România despre participarea și participanții la concursuri de masă - alergare, ciclism, triatlon.",
-    images: ["/images-sitemap.xml"],
+    images: ["/opengraph-image.png"],
     creator: "@endurance_ro_index",
   },
   robots: {

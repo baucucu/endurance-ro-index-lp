@@ -44,7 +44,8 @@ export default function SportsStudied() {
                                     fill
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                                    title={`${sport.name} - Sporturi studiate în Endurance Ro-Index`}
+                                    title={`${sport.name} - Sporturi studiate în Endurance Ro-Index 2025`}
+                                    priority={sport.id === "alergare"}
                                 />
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
