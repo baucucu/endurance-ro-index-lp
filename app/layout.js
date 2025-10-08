@@ -44,7 +44,7 @@ export const metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://endurance-index.ro/",
   },
   openGraph: {
     type: "website",
