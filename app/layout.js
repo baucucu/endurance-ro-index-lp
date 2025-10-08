@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script";
 import StructuredData from "./components/StructuredData";
+import FAQStructuredData from "./components/FAQStructuredData";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -125,6 +126,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <StructuredData />
+        <FAQStructuredData />
         {children}
         {/* Google Analytics */}
         <Script

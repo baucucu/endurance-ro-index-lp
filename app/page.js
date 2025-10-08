@@ -8,6 +8,7 @@ import CompetitionsDistancesStacked from "./components/CompetitionsDistancesStac
 // import MindsetSection from "./components/MindsetSection";
 import MindsetStackedSections from "./components/MindsetStackedSections";
 import AmbassadorsSection from "./components/AmbassadorsSection";
+import FAQSection from "./components/FAQSection";
 import EndingSection from "./components/EndingSection";
 import SocialEmbedsSection from "./components/SocialEmbedsSection";
 
@@ -24,6 +25,7 @@ export default function Home() {
       {/* <ParticipantsProfile /> */}
       <ParticipantsProfileStacked />
       <AmbassadorsSection />
+      <FAQSection />
       <EndingSection />
       <SocialEmbedsSection />
     </main>
