@@ -24,6 +24,23 @@ const nextConfig = {
                         key: 'X-Robots-Tag',
                         value: 'index, follow',
                     },
+                    {
+                        key: 'Link',
+                        value: '<https://endurance-index.ro/>; rel="canonical"',
+                    },
+                ],
+            },
+            {
+                source: '/',
+                headers: [
+                    {
+                        key: 'X-Robots-Tag',
+                        value: 'index, follow',
+                    },
+                    {
+                        key: 'Link',
+                        value: '<https://endurance-index.ro/>; rel="canonical"',
+                    },
                 ],
             },
         ];

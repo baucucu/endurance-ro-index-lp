@@ -116,6 +116,7 @@ export default function StructuredData() {
                 "@type": "WebPage",
                 "@id": "https://endurance-index.ro/#webpage",
                 "url": "https://endurance-index.ro/",
+                "mainEntityOfPage": "https://endurance-index.ro/",
                 "name": "Endurance Ro-Index 2025 | Studiu de cercetare despre sporturile de anduranță din România",
                 "isPartOf": {
                     "@id": "https://endurance-index.ro/#website"
