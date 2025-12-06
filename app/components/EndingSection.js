@@ -23,6 +23,7 @@ export default function EndingSection() {
         "Smartatletic",
         "Team Run",
         "YOLO Events",
+        "Test",
     ];
     return (
         <section className="relative w-full isolate overflow-hidden">
@@ -140,5 +141,3 @@ export default function EndingSection() {
         </section>
     );
 }
-
-
