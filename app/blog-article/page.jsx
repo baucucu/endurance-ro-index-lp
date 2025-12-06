@@ -4,7 +4,7 @@ import { builder } from "@builder.io/sdk";
 import { RenderBuilderContent } from "../components/builder";
 
 // Replace with your Public API Key
-builder.init("b556177e043944a9968f883a8ec77af0");
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
 export default async function Page(props) {
   const content = await builder
@@ -30,7 +30,7 @@ import { builder } from "@builder.io/sdk";
 import { BuilderComponent, useIsPreviewing } from "@builder.io/react";
 
 // Replace with your Public API Key 
-builder.init(YOUR_API_KEY);
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
 // type BuilderPageProps = ComponentProps<typeof BuilderComponent>;
 
