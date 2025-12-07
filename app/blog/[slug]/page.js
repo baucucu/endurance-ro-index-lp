@@ -29,12 +29,12 @@ export async function generateMetadata({ params }) {
 
   return {
     title: data?.title || "Blog",
-    description: data?.excerpt || data?.title,
+    description: data?.blurb || data?.title,
     openGraph: {
       title: data?.title,
-      description: data?.excerpt,
+      description: data?.blurb,
       type: "article",
-      publishedTime: data?.publishedDate,
+      publishedTime: data?.date,
       authors: data?.author?.name ? [data.author.name] : undefined,
       images: data?.image
         ? [
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: "summary_large_image",
       title: data?.title,
-      description: data?.excerpt,
+      description: data?.blurb,
       images: data?.image ? [data.image] : undefined,
     },
   };
@@ -82,10 +82,10 @@ export default async function BlogArticlePage({ params }) {
 
   const { data } = article;
   const title = data?.title;
-  const excerpt = data?.excerpt;
+  const excerpt = data?.blurb; // Builder.io field name
   const image = data?.image;
   const author = data?.author;
-  const publishedDate = data?.publishedDate;
+  const publishedDate = data?.date; // Builder.io field name
   const category = data?.category;
 
   return (

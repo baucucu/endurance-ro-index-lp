@@ -107,10 +107,10 @@ function ArticleCard({ article }) {
   const { data } = article;
   const slug = data?.slug;
   const title = data?.title || "Untitled";
-  const excerpt = data?.excerpt || "";
+  const excerpt = data?.blurb || ""; // Builder.io field name
   const image = data?.image;
   const author = data?.author;
-  const publishedDate = data?.publishedDate;
+  const publishedDate = data?.date; // Builder.io field name
   const category = data?.category;
 
   if (!slug) return null;
