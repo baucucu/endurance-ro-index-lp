@@ -8,7 +8,7 @@ export default function AboutStudy() {
                     Despre Endurance Ro-Index 2025
                 </h2>
                 <p className="mt-6 text-center text-lg text-[#0f3e5e] max-w-4xl mx-auto">
-                    Ediția de lansare din 2025 a evaluat participarea și concurenții la evenimentele din 2024 și surprinde perspective utile pentru toți actorii implicați- organizatorii curselor, sponsori ai evenimentelor, branduri și industrii cointeresate, presa de specialitate sport-lifestyle-sănătate, sau autorități. Studiul se va desfășura anual.
+                    Ediția de lansare din 2025 a evaluat participarea și concurenții la evenimentele din 2024 și surprinde perspective utile pentru toți actorii implicați- organizatorii curselor, sponsori ai evenimentelor, branduri și industrii cointeresate, presa de specialitate sport-lifestyle-sănătate, sau autorități.  Studiul se va desfășura anual.
                 </p>
 
                 <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -64,3 +64,5 @@ export default function AboutStudy() {
         </section>
     );
 }
+
+
