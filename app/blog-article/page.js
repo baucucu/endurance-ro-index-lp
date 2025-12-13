@@ -20,19 +20,42 @@ export default async function BlogArticlePreviewPage({ searchParams }) {
   // Check if we're in Builder.io's preview/edit mode
   const isBuilderPreview =
     params?.["builder.preview"] === "blog-article" ||
-    params?.["builder.editing"] === "true";
+    params?.["builder.editing"] === "true" ||
+    params?.["builder.preview"];
 
-  // Get the content from Builder.io for preview
-  const content = await builder
-    .get("blog-article", {
-      userAttributes: {
-        urlPath: "/blog-article",
-      },
-      options: {
-        includeUnpublished: true,
-      },
-    })
-    .toPromise();
+  // Get content ID from Builder.io preview params if available
+  const contentId = params?.["builder.preview"] || params?.["builder.space"];
+
+  let content = null;
+
+  // If we have a content ID, fetch that specific content
+  if (contentId && contentId !== "blog-article") {
+    try {
+      content = await builder.get("blog-article", contentId, {
+        options: {
+          includeUnpublished: true,
+        },
+      }).toPromise();
+    } catch (error) {
+      console.error("Error fetching Builder.io content:", error);
+    }
+  } else {
+    // Otherwise, try to get content by URL path or get the first available
+    try {
+      content = await builder
+        .get("blog-article", {
+          userAttributes: {
+            urlPath: "/blog-article",
+          },
+          options: {
+            includeUnpublished: true,
+          },
+        })
+        .toPromise();
+    } catch (error) {
+      console.error("Error fetching Builder.io content:", error);
+    }
+  }
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
@@ -52,5 +75,6 @@ export default async function BlogArticlePreviewPage({ searchParams }) {
     </main>
   );
 }
+
 
 
