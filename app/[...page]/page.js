@@ -22,15 +22,22 @@ export async function generateStaticParams() {
   });
 
   return pages
-    .filter((page) => page.data?.url && !RESERVED_PATHS.includes(page.data.url.replace(/^\//, "")))
+    .filter((page) => {
+      const url = page.data?.url;
+      if (!url) return false;
+      const pathWithoutSlash = url.replace(/^\//, "");
+      // Exclude root path and reserved paths (required catch-all doesn't match root)
+      return url !== "/" && !RESERVED_PATHS.includes(pathWithoutSlash);
+    })
     .map((page) => ({
-      page: page.data.url === "/" ? [] : page.data.url.split("/").filter(Boolean),
+      page: page.data.url.split("/").filter(Boolean),
     }));
 }
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
+  // With required catch-all, page is always an array
   const urlPath = "/" + (resolvedParams?.page?.join("/") || "");
 
   // Skip reserved paths
@@ -63,6 +70,7 @@ export async function generateMetadata({ params }) {
 
 export default async function CatchAllPage({ params }) {
   const resolvedParams = await params;
+  // With required catch-all, page is always an array
   const urlPath = "/" + (resolvedParams?.page?.join("/") || "");
 
   // Skip reserved paths - let Next.js handle them
